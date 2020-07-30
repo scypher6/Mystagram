@@ -24,5 +24,5 @@ This is an app that aims to mimic Instragram as much as possible.
 ## Getting Started
 - Clone the repo and cd into the 'insta-app' folder
 - Run *bundle install* to install all dependencies
-- Run *rails s
+- Run server: *rails s*
 - Enjoy! :)
