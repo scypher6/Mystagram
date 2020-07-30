@@ -1,0 +1,49 @@
+
+
+<div class="row" >
+  <div class="col-md-6"> 
+    <img src = "https://i.imgur.com/0sfX2hI.png" alt="Instagram on a phone" style="margin-left: 20%; margin-top:10%"/>
+    
+  </div>
+
+  <div class="col-md-3" style="box-shadow: 1px 2px 4px rgba(0, 0, 0, .2); margin-top: 4%">
+    <img src="https://entrecodigoyletras.files.wordpress.com/2016/05/instagram-logo.png?w=656" width="80%" alt="Instagram logo" />
+    <br />
+    <h4 style="text-align: center;">  Sign up to see photos and videos from your friends.  </h4>
+
+
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>  
+
+  <div class="form-inputs">
+    <%= f.input :username,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "username" }%>
+
+    <%= f.input :email,
+                required: true,
+                autofocus: false,
+                input_html: { autocomplete: "email" }%>
+    <%= f.input :password,
+                required: true,
+                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                input_html: { autocomplete: "new-password" } %>
+    <%= f.input :password_confirmation,
+                required: true,
+                input_html: { autocomplete: "new-password" } %>
+  </div>
+
+    <div class="form-actions" class="col-md-6" style="text-align:center;box-shadow: 1px 2px 4px rgba(0, 0, 0, .2); background-color: rgb(62, 74, 247); border-radius:5px 5px 5px 5px">
+      <%= f.button :submit, "Sign up", class:"button" %>
+    </div>
+
+
+  <% end %>
+    <br />
+    <div style="text-align: center;">
+      Have an account?
+      <%= render "devise/shared/links" %>
+    </div>
+ </div>
+</div>

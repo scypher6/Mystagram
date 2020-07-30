@@ -1,0 +1,57 @@
+<div style="text-align: center; margin-top:1%">
+    <%= link_to "Back", root_path %> |
+    <%= link_to "Edit", edit_pic_path %> |
+    <%= link_to "Delete", pic_path, method: :delete, data: {confirm: "Are you sure?"} %> 
+</div>
+
+<div class="col-sm-12 h-100 py-2 px-2" style="margin-left:5%;">
+    <div class="card-group" height="10%">
+  
+        <div class="card">
+            <img src=<%="#{@pic.image.url}"%> alt=<%=@pic.title%> width="100%" />
+            <small>Description: <%= @pic.title %></small>
+        </div>
+
+        <div class="card" style="margin-right:10%; padding-top:1%">
+            <h6 style="margin-left:5%">
+                <%= link_to "#{@pic.user.username}", @pic.user %> 
+                <div style="margin-left:10%;"><%= @pic.description %></div>
+            </h6>
+          
+            <% @pic.comments.each do |comment| %>
+            <h6 style="margin-left: 15%"> 
+                <%= link_to "#{comment.user.username}", comment.user %> 
+                &nbsp; <%= comment.content %> 
+            </h6>
+
+            <% end %>
+
+      
+               <div class="vertical banner"> 
+                <div id="bottom_link" style="margin-left:5%;">
+                    <!-- <input type="image" src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Twemoji12_1f5a4.svg" width="17%" /> -->
+ 
+                  <%  if (@like.nil?) %>
+                        <%= link_to image_tag("https://upload.wikimedia.org/wikipedia/commons/4/4a/Twemoji12_1f5a4.svg", width:"17%"), pic_likes_path(@pic), method: :post %>
+                        <p><%= @pic.likes.count %> <%= (@pic.user.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+                  <%  elsif (!@like.nil?) %>
+                  <!-- "/pics/#{@pic.id}/likes/#{@like.id}" -->
+                        
+                        <%= link_to image_tag("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSdeBlfsvnZ5sZw7W1dWGT7D67P3XdBAqA3ivkrCBl15fu6JBt7", width:"17%"), "/pics/#{@pic.id}/likes/#{@like.id}", method: :delete %>
+                        <p><%= @pic.likes.count %> <%= (@pic.user.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+                   <% end %>
+
+                     <%= form_for @comment do |f| %>
+                
+                                <%= f.text_area  :content, value: "Add a comment ...", style:"width:100%" %>
+                                <%= f.hidden_field :pic_id, :value => params[:id] %>
+                                <%= f.hidden_field :user_id, :value => current_user.id %>
+                        <%= f.submit "Post", style:"margin-bottom:1%" %>  
+                    <% end %>
+                </div>
+                </div>
+    
+        </div>
+    </div>
+</div>
+
