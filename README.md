@@ -1,6 +1,5 @@
 # Mystergram
-
-This is an app that aims to mimic Instragram as much as possible. 
+Instagram clone app
 
 ## Features
 - Create a new account
