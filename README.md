@@ -14,7 +14,8 @@ Instagram clone app
 - Like/unlike a post
 
 ## Technologies
-- HTML/CSS
+- HTML
+- SASS/CSS
 - Ruby
 - Ruby on Rails
 - Devise
