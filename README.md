@@ -16,7 +16,6 @@ Instagram clone app
 ## Technologies
 - HTML
 - SASS/CSS
-- Ruby
 - Ruby on Rails
 - Devise
 - Bootstrap
