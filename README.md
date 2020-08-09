@@ -1,5 +1,5 @@
 # Mystergram
-An Instagram clone app
+An Instagram clone based on Ruby-on-Rails
 
 ## Features
 - Create a new account
