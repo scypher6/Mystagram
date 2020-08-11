@@ -15,7 +15,7 @@ An Instagram clone with minor variations.
 
 ## Technologies
 - HTML
-- SASS/CSS
+- SASS
 - Ruby on Rails
 - Devise
 - Bootstrap
