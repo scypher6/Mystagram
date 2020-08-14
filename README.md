@@ -1,5 +1,5 @@
 # Mystergram
-An Instagram clone with minor variations.
+My version of an Instagram app.
 
 ## Features
 - Create a new account
