@@ -34,7 +34,7 @@
                   <%  if (@like.nil?) %>
                         <%= link_to image_tag("https://upload.wikimedia.org/wikipedia/commons/4/4a/Twemoji12_1f5a4.svg", width:"17%"), pic_likes_path(@pic), method: :post %>
                         <p><%= @pic.likes.count %> <%= (@pic.user.likes.count) == 1 ? 'Like' : 'Likes'%></p>
-                  <%  elsif %>
+                  <%  else %>
                   <!-- "/pics/#{@pic.id}/likes/#{@like.id}" -->
                         
                         <%= link_to image_tag("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSdeBlfsvnZ5sZw7W1dWGT7D67P3XdBAqA3ivkrCBl15fu6JBt7", width:"17%"), "/pics/#{@pic.id}/likes/#{@like.id}", method: :delete %>
