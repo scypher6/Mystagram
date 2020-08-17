@@ -1,24 +1,27 @@
-# README
+# Mystergram
+My version of an Instagram app.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Features
+- Create a new account
+- Update your profile
+- Upload pictures to your account
+- Post pictures with comment
+- Delete your post
+- Delete your account
+- View other user accounts
+- Follow any users
+- Comment on user posts
+- Like/unlike a post
 
-Things you may want to cover:
+## Technologies
+- HTML
+- SASS
+- Ruby on Rails
+- Devise
+- Bootstrap
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Getting Started
+- Clone the repo and cd into the 'insta-app' folder
+- Run *bundle install* to install all dependencies
+- Run server: *rails s*
+- Enjoy! :)
