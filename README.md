@@ -9,8 +9,8 @@ My version of an Instagram app.
 - Delete your post
 - Delete your account
 - View other user accounts
-- Follow any users
 - Comment on user posts
+- Follow/unfollow a user
 - Like/unlike a post
 
 ## Technologies
