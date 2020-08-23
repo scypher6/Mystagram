@@ -1,4 +1,4 @@
-# Mystergram
+# Mystagram
 My version of an Instagram app.
 
 ## Features
