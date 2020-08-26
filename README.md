@@ -16,7 +16,7 @@ My version of an Instagram app.
 ## Technologies
 - HTML
 - SASS
-- Ruby-on-Rails
+- Ruby-on-Rails [6^]
 - Devise
 - Bootstrap
 
