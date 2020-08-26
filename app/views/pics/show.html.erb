@@ -12,13 +12,14 @@
             <small>Description: <%= @pic.title %></small>
         </div>
 
+        <!-- Picture & description -->
         <div class="card" style="margin-right:10%; padding-top:1%">
             <h6 style="margin-left:5%">
                 <%= link_to "#{@pic.user.username}", @pic.user %> 
                 <div style="margin-left:10%;"><%= @pic.description %></div>
             </h6>
           
-            <!-- Comment box -->
+            <!-- Comment Box -->
             <% @pic.comments.each do |comment| %>
             <h6 style="margin-left: 15%"> 
                 <%= link_to "#{comment.user.username}", comment.user %> 
