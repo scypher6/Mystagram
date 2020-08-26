@@ -4,7 +4,7 @@
     <%= link_to "Delete", pic_path, method: :delete, data: {confirm: "Are you sure?"} %> 
 </div>
 
-<div class="col-sm-12 h-100 py-2 px-2" style="margin-left:5%;">
+<div class="col-sm-14 h-100 py-2 px-2" style="margin-left:5%;">
     <div class="card-group" height="10%">
   
         <div class="card">
@@ -18,7 +18,7 @@
                 <%= link_to "#{@pic.user.username}", @pic.user %> 
                 <div style="margin-left:10%;"><%= @pic.description %></div>
             </h6>
-          
+    
             <!-- Comment Box -->
             <% @pic.comments.each do |comment| %>
             <h6 style="margin-left: 15%"> 
@@ -27,7 +27,6 @@
             </h6>
 
             <% end %>
-
       
                <div class="vertical banner"> 
                 <div id="bottom_link" style="margin-left:5%;">
@@ -42,6 +41,7 @@
                         <%= link_to image_tag("https://upload.wikimedia.org/wikipedia/commons/4/4a/Twemoji12_1f5a4.svg", width:"17%"), "/pics/#{@pic.id}/likes/#{@like.id}", method: :delete %>
                         <p><%= @pic.likes.count %> <%= (@pic.user.likes.count) == 1 ? 'Like' : 'Likes'%></p>
                    <% end %>
+
                     <!-- COMMENT BOX -->
                     <%= form_for @comment do |f| %>        
                                 <%= f.text_area  :content, value: "Add a comment ...", style:"width:100%" %>
