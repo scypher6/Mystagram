@@ -41,7 +41,14 @@
                         <%= link_to image_tag("https://upload.wikimedia.org/wikipedia/commons/4/4a/Twemoji12_1f5a4.svg", width:"17%"), "/pics/#{@pic.id}/likes/#{@like.id}", method: :delete %>
                         <p><%= @pic.likes.count %> <%= (@pic.user.likes.count) == 1 ? 'Like' : 'Likes'%></p>
                    <% end %>
-
+                </div>
+                </div>
+                
+    
+        </div>
+    </div>
+</div>
+<div class="col-sm-14 h-100 py-2 px-6" style="margin-left:5%; margin-right:10%;">
                     <!-- COMMENT BOX -->
                     <%= form_for @comment do |f| %>        
                                 <%= f.text_area  :content, value: " ", style:"width:100%" %>
@@ -49,10 +56,4 @@
                                 <%= f.hidden_field :user_id, :value => current_user.id %>
                     <%= f.submit "Post", style:"margin-bottom:1%" %>  
                     <% end %>
-                </div>
-                </div>
-    
-        </div>
-    </div>
 </div>
-
