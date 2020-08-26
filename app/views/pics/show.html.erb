@@ -18,6 +18,7 @@
                 <div style="margin-left:10%;"><%= @pic.description %></div>
             </h6>
           
+            <!-- Comment box -->
             <% @pic.comments.each do |comment| %>
             <h6 style="margin-left: 15%"> 
                 <%= link_to "#{comment.user.username}", comment.user %> 
