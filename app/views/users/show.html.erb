@@ -1,13 +1,14 @@
+
+<!-- Navigational bar -->
 <div style="text-align: center;">
     <% correct_user = User.find_by(id: params[:id]) %>
     <h1><%= correct_user.username %></h1> 
     <h6><%= correct_user.email %> <%= button_to "Follow", follower_path(correct_user.id), method: :post  %></h6> 
     <h6 style="word-spacing: 4px"><%= correct_user.pics.count.to_i %> posts &nbsp;&nbsp;&nbsp; <%= correct_user.followers.count.to_i %> Followers &nbsp;&nbsp;&nbsp; <%= correct_user.followers.count.to_i %> Following </h6>
     
-
-
     <br />
     <br />
+    <!--  -->
     <h3>.::Posts::.</h3>
 </div>
 
