@@ -16,8 +16,7 @@
     <div class="container">
     <div class="row">
       <!-- sort pictures and display them -->  
-       <%= @user %>
-      <% sorted_pics = current_user.pics.order('created_at DESC') %>
+      <% sorted_pics = @user.pics.order('created_at DESC') %>
         <% sorted_pics.all.each do |pic|%>
             <div class="col-sm-4 h-100 py-2 px-2">
               <div class="card card-body h-100 mt-4" >
