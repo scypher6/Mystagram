@@ -8,14 +8,14 @@
     
     <br />
     <br />
-    <!-- User's own posts -->
+    <!-- User's list of posts -->
     <h3>.::Posts::.</h3>
 </div>
 
 <div class="container">
     <div class="container">
     <div class="row">
-      <!-- sort pictures and display them -->  
+      <!-- sort pictures in descending order of creation and display them -->  
       <% sorted_pics = @user.pics.order('created_at DESC') %>
         <% sorted_pics.all.each do |pic|%>
             <div class="col-sm-4 h-100 py-2 px-2">
