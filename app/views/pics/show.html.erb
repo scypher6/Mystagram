@@ -9,30 +9,30 @@
 
 <div class="col-sm-14 h-100 py-2 px-6" style="margin-left:5%;">
     <div class="card-group" height="10%">
-  
+        
         <div class="card">
-            <img src=<%="#{@pic.image.url}"%> alt=<%=@pic.title%> width="100%" />
+            <img src=<%="#{@pic.image.url}"%> alt=<%=@pic.title%> width="100%" height="100%"/>
             <small>Description: <%= @pic.title %></small>
         </div>
-
+        
         <!-- Picture & description -->
         <div class="card" style="margin-right:10%; padding-top:1%">
-            <h6 style="margin-left:5%">
-                <%= link_to "#{@pic.user.username}", @pic.user %> 
-                <div style="margin-left:10%;"><%= @pic.description %></div>
-            </h6>
-    
-            <!-- Comment Box -->
-            <% @pic.comments.each do |comment| %>
-            <h6 style="margin-left: 15%"> 
-                <%= link_to "#{comment.user.username}", comment.user %> 
-                &nbsp; <%= comment.content %> 
-            </h6>
-
-            <% end %>
+                <h6 style="margin-left:5%">
+                    <%= link_to "#{@pic.user.username}", @pic.user %> 
+                    <div style="margin-left:10%;"><%= @pic.description %></div>
+                </h6>
+        
+                <!-- Comment Box -->
+                <% @pic.comments.each do |comment| %>
+                <h6 style="margin-left: 15%"> 
+                    <%= link_to "#{comment.user.username}", comment.user %> 
+                    &nbsp; <%= comment.content %> 
+                </h6>
+                <% end %>
+ 
       
-               <div class="vertical banner"> 
-                <div id="bottom_link" style="margin-left:5%;">
+                <div class="vertical banner"> 
+                 <div id="bottom_link" style="margin-left:5%;">
                                    <!-- <input type="image" src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Twemoji12_1f5a4.svg" width="17%" /> -->
                   <!-- LIKING & UNLIKING -->
                   <%  if (@like.nil?) %>
@@ -44,9 +44,8 @@
                         <%= link_to image_tag("https://upload.wikimedia.org/wikipedia/commons/4/4a/Twemoji12_1f5a4.svg", width:"17%"), "/pics/#{@pic.id}/likes/#{@like.id}", method: :delete %>
                         <p><%= @pic.likes.count %> <%= (@pic.user.likes.count) == 1 ? 'Like' : 'Likes'%></p>
                    <% end %>
-                </div>
-                </div>
-                
+                 </div>
+                </div>    
     
         </div>
     </div>
