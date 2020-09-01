@@ -18,6 +18,7 @@ My version of an Instagram app.
 - SASS
 - Ruby-on-Rails [6^]
 - Devise
+- PaperClip
 - Bootstrap
 
 ## Getting Started
