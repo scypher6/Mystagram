@@ -17,9 +17,9 @@
           <!-- <%= resource_name.to_s.humanize %> add the word 'user'  -->
       <br />
       <!-- EDIT FORM -->
-        <!-- Display form for updating profile picture -->
-        <%= render 'userPicForm' %>
-        <br />
+      <!-- Display form for updating profile picture -->
+      <%= render 'userPicForm' %>
+      <br />
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= f.error_notification %>
 
@@ -47,7 +47,7 @@
         <div class="form-actions">
           <%= f.button :submit, "Update" %>
         </div>
-      <% end %>
+       <% end %>
 
       <h3>Cancel my account</h3>
 
