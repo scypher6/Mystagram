@@ -7,7 +7,7 @@
     <h6 style="word-spacing: 4px"><%= @user.pics.count.to_i %> posts &nbsp;&nbsp;&nbsp; <%= @user.followers.count %> Followers &nbsp;&nbsp;&nbsp; <%= @user.followings.count %> Following </h6>
   </div> 
   <!-- Profile picture goes here -->
-  <img src=<%="#{@user.picture.url}"%> alt='Profile picture' width="100%" />
+  <img class='profilePic' src=<%="#{@user.picture.url}"%> alt='Profile picture' width="100%" />
   <br><br><br><br><br><br>
 
  <div class="col-md-7">
@@ -15,8 +15,10 @@
 <h4>Edit <%= resource_name.to_s.humanize %></h4>
 <br />
 <!-- Edit Form -->
-<%= render 'userPicForm' %>
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+ <!-- Display form for updating profile picture -->
+ <%= render 'userPicForm' %>
+ <br />
+ <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs"> 
