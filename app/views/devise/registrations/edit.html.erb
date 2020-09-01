@@ -9,13 +9,12 @@
       <h6 style="word-spacing: 4px"><%= @user.pics.count.to_i %> posts &nbsp;&nbsp;&nbsp; <%= @user.followers.count %> Followers &nbsp;&nbsp;&nbsp; <%= @user.followings.count %> Following </h6>
   </div> 
 
-  <br><br><br><br>
+  <br><br><br>
 
- <div class="col-md-7 line-up" >
+  <div class="col-md-7 line-up" >
     <div id="pads" style="box-shadow: 1px 2px 4px;">
       <h4>Edit Your Profile </h4>
           <!-- <%= resource_name.to_s.humanize %> add the word 'user'  -->
-      <br />
       <!-- EDIT FORM -->
       <!-- Display form for updating profile picture -->
       <%= render 'userPicForm' %>
