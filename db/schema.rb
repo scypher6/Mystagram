@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_01_012643) do
+ActiveRecord::Schema.define(version: 2020_09_01_020658) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "count"
@@ -60,7 +60,10 @@ ActiveRecord::Schema.define(version: 2020_09_01_012643) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "username"
-    t.string "picture"
+    t.string "picture_file_name"
+    t.string "picture_content_type"
+    t.integer "picture_file_size"
+    t.datetime "picture_updated_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

@@ -13,4 +13,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  #For Paperclip gem
+  has_attached_file :picture, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/picture/:style/missing.png"
+  validates_attachment_content_type :picture, content_type: /\Aimage\/.*\z/
 end
