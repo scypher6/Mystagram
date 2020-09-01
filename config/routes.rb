@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   patch '/users/:id', to: 'users#update'
 
   post '/follower/:id', to: 'follows#create', as: :follower 
+  delete '/follower/:id', to: 'follows#destroy', as: :follower 
 
   delete '/pics/:pic_id/likes/:id', to: 'likes#destroy', as: :destroy_like_path
 
