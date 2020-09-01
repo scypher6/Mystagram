@@ -24,13 +24,8 @@
         height:200px;
  }
 
- .cln {
-       top:220px;
-       width:680px;
-       height:350px;
-       text-align:left;
-       overflow:scroll;
-       white-space: nowrap;
-       overflow:hidden;
-       text-overflow:ellipsis;
+ .scrollBox {
+       overflow-y: scroll;
+       height: 500px;
+       padding: 1rem
 }
