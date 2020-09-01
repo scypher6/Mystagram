@@ -2,6 +2,7 @@
     <!--  USER'S SHOW PAGE -->
 <div style="text-align: center;">
     <% correct_user = User.find_by(id: params[:id]) %>
+    <img class='profilePic' src=<%="#{correct_user.picture.url}"%> alt='Profile picture' width="100%" />
     <h1><%= correct_user.username %></h1> 
     <h6><%= correct_user.email %> 
     <% if (correct_user != current_user) %> <!-- Hide Follow button if on own show page -->
