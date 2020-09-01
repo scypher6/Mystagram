@@ -12,7 +12,7 @@ class UsersController < ApplicationController
         else
             render "edit"
         end
-        byebug
+        # byebug
 
     end
 
