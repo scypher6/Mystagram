@@ -1,6 +1,8 @@
 <div style="color:rgba(90, 113, 247, 0.685); size:10;">
     <%= simple_form_for(@user) do |f| %>
         <%= f.input :picture %> 
-        <div style="text-align: center;"><%= f.button :submit, class:"button" %></div>
+        <div style="text-align: left;">
+            <%= f.button :submit, class:"button" %>
+        </div>
     <% end %>
 </div>
