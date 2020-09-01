@@ -9,6 +9,10 @@ class FollowsController < ApplicationController
         end
     end
 
+    def destroy
+        byebug
+    end
+
 
 
     private

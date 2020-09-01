@@ -3,7 +3,7 @@
     <!-- Check if the current user is the one who posted the pic -->
     <% if (current_user.username === @pic.user.username) %>
       | <%= link_to "Edit", edit_pic_path %> |
-       <%= link_to "Delete", pic_path, method: :delete, data: {confirm: "Are you sure?"} %> 
+        <%= link_to "Delete", pic_path, method: :delete, data: {confirm: "Are you sure?"} %> 
     <% end %>
 </div>
 
