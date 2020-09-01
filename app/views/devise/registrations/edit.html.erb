@@ -1,59 +1,59 @@
 <div class="container">
  <br /> 
-  <!-- PROFILE DETAILS -->
+   <!-- PROFILE DETAILS -->
   <div style="text-align:center;">
       <!-- Profile picture goes here -->
-    <img class='profilePic' src=<%="#{@user.picture.url}"%> alt='Profile picture' width="100%" />
-    <h3><%= @user.username %></h3>
-    <h6><%= @user.email %></h6>
-    <h6 style="word-spacing: 4px"><%= @user.pics.count.to_i %> posts &nbsp;&nbsp;&nbsp; <%= @user.followers.count %> Followers &nbsp;&nbsp;&nbsp; <%= @user.followings.count %> Following </h6>
+      <img class='profilePic' src=<%="#{@user.picture.url}"%> alt='Profile picture' width="100%" />
+      <h3><%= @user.username %></h3>
+      <h6><%= @user.email %></h6>
+      <h6 style="word-spacing: 4px"><%= @user.pics.count.to_i %> posts &nbsp;&nbsp;&nbsp; <%= @user.followers.count %> Followers &nbsp;&nbsp;&nbsp; <%= @user.followings.count %> Following </h6>
   </div> 
 
   <br><br><br><br>
 
  <div class="col-md-7 line-up" >
- <div id="pads" style="box-shadow: 1px 2px 4px;">
-  <h4>Edit Your Profile </h4>
-    <!-- <%= resource_name.to_s.humanize %> add the word 'user'  -->
-<br />
-<!-- EDIT FORM -->
- <!-- Display form for updating profile picture -->
- <%= render 'userPicForm' %>
- <br />
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
+    <div id="pads" style="box-shadow: 1px 2px 4px;">
+      <h4>Edit Your Profile </h4>
+          <!-- <%= resource_name.to_s.humanize %> add the word 'user'  -->
+      <br />
+      <!-- EDIT FORM -->
+        <!-- Display form for updating profile picture -->
+        <%= render 'userPicForm' %>
+        <br />
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= f.error_notification %>
 
-  <div class="form-inputs"> 
-    <%= f.input :username, required: true, autofocus: true %>
-    <%= f.input :email, required: true, autofocus: false %>
+        <div class="form-inputs"> 
+          <%= f.input :username, required: true, autofocus: true %>
+          <%= f.input :email, required: true, autofocus: false %>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+          <% end %>
 
-    <%= f.input :password,
-                hint: "leave it blank if you don't want to change it",
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :current_password,
-                hint: "we need your current password to confirm your changes",
-                required: true,
-                input_html: { autocomplete: "current-password" } %>
+          <%= f.input :password,
+                      hint: "leave it blank if you don't want to change it",
+                      required: false,
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :password_confirmation,
+                      required: false,
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :current_password,
+                      hint: "we need your current password to confirm your changes",
+                      required: true,
+                      input_html: { autocomplete: "current-password" } %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Update" %>
+        </div>
+      <% end %>
+
+      <h3>Cancel my account</h3>
+
+      <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+      <%= link_to "Back", :back %>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
-</div>
-</div>
 </div>
