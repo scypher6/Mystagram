@@ -15,7 +15,7 @@ My version of an Instagram app.
 
 ## Technologies
 - HTML
-- SASS
+- SASS/CSS
 - Ruby-on-Rails [6^]
 - Devise
 - PaperClip
