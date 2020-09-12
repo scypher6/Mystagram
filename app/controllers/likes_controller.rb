@@ -4,7 +4,7 @@ class LikesController < ApplicationController
     def create
         if already_liked?
             flash[:notice] = "Sorry, can't like more than once!"
-          else
+          else #can like
             @pic.likes.create(user_id: current_user.id)
             redirect_to pic_path(@pic)
         end
