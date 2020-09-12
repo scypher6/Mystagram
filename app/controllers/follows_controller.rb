@@ -22,7 +22,7 @@ class FollowsController < ApplicationController
 
 
     private
-
+    # Checks if a particular user was already followed
     def already_followed?
         Follow.where(follower_id: current_user.id, following_id: params[:id]).exists?
         # byebug
