@@ -3,7 +3,7 @@ class FollowsController < ApplicationController
     def create
         if already_followed?
             flash[:notice] = "Sorry can only like once"
-        else
+        else #can follow the user
             @following = User.find(params[:id])
             Follow.create(follower_id: current_user.id, following_id: @following.id)
         end
