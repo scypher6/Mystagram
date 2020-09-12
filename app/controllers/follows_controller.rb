@@ -19,8 +19,6 @@ class FollowsController < ApplicationController
         redirect_to @following
     end
 
-
-
     private
     # Checks if a particular user was already followed
     def already_followed?

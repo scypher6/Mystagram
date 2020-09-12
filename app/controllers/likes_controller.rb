@@ -24,6 +24,7 @@ class LikesController < ApplicationController
         @pic = Pic.find(params[:pic_id])
     end
 
+    #check if a picture was already like
     def already_liked?
         Like.where(user_id: current_user.id, pic_id:
         params[:pic_id]).exists?
