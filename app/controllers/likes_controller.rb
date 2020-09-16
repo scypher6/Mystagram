@@ -11,7 +11,6 @@ class LikesController < ApplicationController
     end
 
     def destroy
-
         @like = Like.find_by(user_id: current_user.id)
         @like.destroy
 

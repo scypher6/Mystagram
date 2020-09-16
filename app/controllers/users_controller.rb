@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     def update
         @user = User.find(params[:id])
         
-        if (@user.update(user_params))
+        if (@user.update(user_params)) #if user exits update them
         else
             render "edit"
         end
