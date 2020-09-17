@@ -9,6 +9,7 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         
         if (@user.update(user_params)) #if user exits update them
+            redirect_to edit_user_registration_path
         else
             render "edit"
         end
