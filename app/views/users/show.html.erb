@@ -9,7 +9,7 @@
       <img class='profilePic' src=<%="#{correct_user.picture.url}"%> alt='Profile picture' width="100%" />
     </div>
     <div class='col-md-10 left-padded'>
-      <h3>
+      <h4>
         <%= correct_user.username %>
         <span class = 'button-div'>
         <% if (correct_user != current_user) %> <!-- Hide Follow button if on own show page -->
@@ -20,7 +20,7 @@
           <% end  %>
         <% end  %>
       </span>
-      </h3>
+      </h4>
       <h6 style="word-spacing: 4px"><b><%= correct_user.pics.count.to_i %></b> posts &nbsp;&nbsp;&nbsp; <b><%= correct_user.followers.count.to_i %></b> Followers &nbsp;&nbsp;&nbsp; <b><%= correct_user.followers.count.to_i %></b> Following </h6>
 
       <h6><b><%= @user.username %></b></h6>
