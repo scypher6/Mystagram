@@ -63,8 +63,11 @@ hr {
      
 .column {
        flex: 50%;
-       margin: 0%;
      }
+
+.left-column {
+       text-align: right !important;
+}
 
 .right-column {
        text-align: left !important;
