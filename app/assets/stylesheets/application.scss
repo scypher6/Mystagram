@@ -56,8 +56,11 @@ hr {
        padding: 0;
    }
 
-
-.padded {
-       padding-right: 0;
-       padding-left: 0;
+.right-padded {
+       padding-right: 5%;
 }
+
+.left-padded {
+       padding-left: 5%;
+}
+

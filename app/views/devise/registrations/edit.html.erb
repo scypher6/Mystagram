@@ -6,7 +6,7 @@
       <div class='col-md-2'>
         <img class='profilePic' src=<%="#{@user.picture.url}"%> alt='Profile picture' width="100%" />
       </div>
-      <div class='col-md-10'>
+      <div class='col-md-10 padded'>
         <h3><%= @user.username %></h3>
         <h6><%= @user.email %></h6>
         <h6 style="word-spacing: 4px"><b><%= @user.pics.count.to_i %></b> posts &nbsp;&nbsp;&nbsp; <b><%= @user.followers.count %></b> Followers &nbsp;&nbsp;&nbsp; <b><%= @user.followings.count %></b> Following </h6>
