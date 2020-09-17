@@ -1,4 +1,4 @@
-![Instagram Clone App](https://i.imgur.com/gwWQuPb.png)
+![Instagram Clone App](https://i.imgur.com/oBFAUuh.png)
 
 # Mystagram
 My version of an Instagram app.
