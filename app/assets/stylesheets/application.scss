@@ -56,19 +56,8 @@ hr {
        padding: 0;
    }
 
-.row {
-       display: flex;
-       
-     }
-     
-.column {
-       flex: 50%;
-     }
 
-.left-column {
-       text-align: right !important;
-}
-
-.right-column {
-       text-align: left !important;
+.padded {
+       padding-right: 0;
+       padding-left: 0;
 }
