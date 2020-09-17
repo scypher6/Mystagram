@@ -1,7 +1,7 @@
+![Instagram Clone App](https://i.imgur.com/gwWQuPb.png)
+
 # Mystagram
 My version of an Instagram app.
-
-![Instagram Clone App](https://i.imgur.com/gwWQuPb.png)
 
 ## Features
 - Create a new account
