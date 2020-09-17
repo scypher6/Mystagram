@@ -13,14 +13,14 @@
 
   <div class="col-md-7 line-up" >
     <div id="pads" style="box-shadow: 1px 2px 4px;">
-      <h4>Edit My Picture </h4>
+      <h4>Edit my picture </h4>
           <!-- <%= resource_name.to_s.humanize %> add the word 'user'  -->
       <!-- EDIT FORM -->
       <!-- Display form for updating profile picture -->
       <%= render 'userPicForm' %>
       <br />
       <hr />
-      <h4>Edit My Information </h4>
+      <h4>Edit my information </h4>
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= f.error_notification %>
 
