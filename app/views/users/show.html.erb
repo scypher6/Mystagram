@@ -4,14 +4,14 @@
    <!-- PROFILE DETAILS -->
 <div class='row right-padded'>
     <!-- Profile picture goes here -->
-    <div class='col-md-2'>
+    <div class='col-md-2' style="padding-left: 4%; padding-top: 2%;">
       <% correct_user = User.find_by(id: params[:id]) %>
       <img class='profilePic' src=<%="#{correct_user.picture.url}"%> alt='Profile picture' width="100%" />
     </div>
     <div class='col-md-10 left-padded'>
       <h4>
         <%= correct_user.username %>
-        <span class = 'button-div'>
+        <span class = 'button-div' style="word-spacing: 4px; margin-top: 3%; margin-bottom: 1%;">
         <% if (correct_user != current_user) %> <!-- Hide Follow button if on own show page -->
           <% if (Follow.where(follower_id: current_user.id, following_id: params[:id]).exists?) %>
             <%= button_to "Unfollow", follower_path(correct_user.id), method: :delete, :class => 'follow-button' %>
@@ -21,7 +21,7 @@
         <% end  %>
       </span>
       </h4>
-      <h6 style="word-spacing: 4px"><b><%= correct_user.pics.count.to_i %></b> posts &nbsp;&nbsp;&nbsp; <b><%= correct_user.followers.count.to_i %></b> Followers &nbsp;&nbsp;&nbsp; <b><%= correct_user.followers.count.to_i %></b> Following </h6>
+      <h6 style="word-spacing: 4px; margin-bottom: 3%;"><b><%= correct_user.pics.count.to_i %></b> posts &nbsp;&nbsp;&nbsp; <b><%= correct_user.followers.count.to_i %></b> Followers &nbsp;&nbsp;&nbsp; <b><%= correct_user.followers.count.to_i %></b> Following </h6>
 
       <h6><b><%= @user.username %></b></h6>
       <h6><%= correct_user.email %></h6>
