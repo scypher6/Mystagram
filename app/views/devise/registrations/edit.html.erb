@@ -19,6 +19,8 @@
       <!-- Display form for updating profile picture -->
       <%= render 'userPicForm' %>
       <br />
+      <hr />
+      <br />
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= f.error_notification %>
 
