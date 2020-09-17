@@ -13,7 +13,7 @@
 
   <div class="col-md-7 line-up" >
     <div id="pads" style="box-shadow: 1px 2px 4px;">
-      <h4>Edit Your Profile </h4>
+      <h4>Edit Your Picture </h4>
           <!-- <%= resource_name.to_s.humanize %> add the word 'user'  -->
       <!-- EDIT FORM -->
       <!-- Display form for updating profile picture -->
@@ -21,6 +21,7 @@
       <br />
       <hr />
       <br />
+      <h4>Edit Your Information </h4>
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= f.error_notification %>
 
@@ -49,7 +50,8 @@
           <%= f.button :submit, "Update", :class => 'button' %>
         </div>
        <% end %>
-
+      <br />
+      <hr />
       <br />
       <h4>Cancel my account</h4>
 
