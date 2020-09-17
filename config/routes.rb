@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :comments
   resources :likes
-  devise_for :users
+
   devise_scope :user do
     authenticated :user do
       root to: 'pics#index'
@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: [:show]
+
   patch '/users/:id', to: 'users#update'
 
   post '/follower/:id', to: 'follows#create', as: :follower 

@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class UsersController < Devise::ApplicationController
 
     def show
         # @user = current_user
@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
     def update
         @user = User.find(params[:id])
-        
+
         if (@user.update(user_params)) #if user exits update them
             redirect_to edit_user_registration_path
         else
