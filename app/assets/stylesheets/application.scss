@@ -58,9 +58,14 @@ hr {
 
 .row {
        display: flex;
-       text-align:center;
+       text-align: center;
      }
      
 .column {
        flex: 50%;
+       margin: 0%;
      }
+
+.right-column {
+       text-align: left !important;
+}
