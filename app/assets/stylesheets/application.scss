@@ -47,6 +47,20 @@
   font-size: 16px;
 }
 
+.follow-button {
+       background-color: #4f74da; /* Green */
+       border: none;
+       color: white;
+       text-align: center;
+       text-decoration: none;
+       display: inline-block;
+       font-size: 14px;
+       font-weight: bold;
+       border-radius:99%;
+       height: 50px;
+       width: 100px;
+     }
+
 hr {
        display: block;
        height: 1px;
