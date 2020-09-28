@@ -10,6 +10,7 @@ My version of an Instagram app.
 - Post pictures with comments
 - Delete your post
 - Delete your account
+- Search for users
 - View other user accounts
 - Comment on user posts
 - Follow/unfollow a user
