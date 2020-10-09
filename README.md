@@ -22,7 +22,7 @@ My version of an Instagram app.
 - Ruby-on-Rails [6^]
 - Devise
 - PaperClip
-- Bootstrap
+- Bootstrap [^1.4.2]
 
 ## Getting Started
 - Clone the repo and cd into the 'insta-app' folder
