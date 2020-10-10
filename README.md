@@ -20,7 +20,7 @@ My version of an Instagram app.
 - HTML
 - SASS/CSS
 - Ruby-on-Rails [6^]
-- Devise
+- Devise [2^]
 - PaperClip
 - Bootstrap [1.4.2^]
 
