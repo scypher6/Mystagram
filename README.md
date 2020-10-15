@@ -27,4 +27,4 @@ My version of an Instagram app.
 ## Getting Started
 - Clone the repo and cd into the 'insta-app' folder
 - Run *bundle install* to install all dependencies
-- Run server: *rails s*
+- Run rails server: *rails s*
