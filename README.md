@@ -6,7 +6,7 @@ My version of an Instagram app.
 ## Features
 - Create a new account
 - Update your profile
-- Upload pictures to your account
+- Upload pictures on your account
 - Post pictures with comments
 - Delete your post
 - Delete your account
